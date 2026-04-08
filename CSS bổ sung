@@ -501,175 +501,139 @@ div[class*="wpccl-listing"], div[class*="wpclever-coupon-listing"] {
     cursor: pointer;
 }
 
-/* =============================================
-   GCare - Nút Mua ngay & Thêm vào giỏ
-   ============================================= */
-
-/* --- Nút MUA NGAY (Add to Cart gốc) --- */
-.single_add_to_cart_button,
-.woocommerce .single_add_to_cart_button.button {
-    background: #e02020 !important;
-    color: #fff !important;
+/* NÚT THÊM VÀO GIỎ: GIỐNG HỆT NÚT MUA NGAY */
+.btn-them-vao-gio {
+    background-color: #E31837 !important; /* Cố định màu đỏ */
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    border-radius: 4px !important;
+    height: 50px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
     border: none !important;
-    border-radius: 50px !important;
-    padding: 14px 32px !important;
+    padding: 0 32px !important;
     font-size: 15px !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.5px !important;
-    text-transform: none !important;
     cursor: pointer !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
     position: relative !important;
     overflow: hidden !important;
-    transition: background 0.25s ease, transform 0.18s ease, box-shadow 0.25s ease !important;
-    box-shadow: 0 4px 14px rgba(224,32,32,0.30) !important;
-}
-.single_add_to_cart_button::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(255,255,255,0);
-    transition: background 0.2s ease;
-    border-radius: 50px;
-}
-.single_add_to_cart_button:hover {
-    background: #c01818 !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 22px rgba(224,32,32,0.40) !important;
-}
-.single_add_to_cart_button:hover::after {
-    background: rgba(255,255,255,0.08);
-}
-.single_add_to_cart_button:active {
-    transform: translateY(0) scale(0.97) !important;
-    box-shadow: 0 3px 10px rgba(224,32,32,0.25) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin: 0 !important;
+    white-space: nowrap;
 }
 
-/* --- Nút THÊM VÀO GIỎ (Ajax) --- */
-.btn-them-vao-gio {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background: transparent !important;
-    color: #e02020 !important;
-    border: 2px solid #e02020 !important;
-    border-radius: 50px !important;
-    padding: 13px 28px !important;
-    font-size: 15px !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.5px;
-    cursor: pointer !important;
-    position: relative;
-    overflow: hidden;
-    transition: background 0.25s ease, color 0.25s ease,
-                transform 0.18s ease, box-shadow 0.25s ease !important;
-    margin-top: 10px;
-    width: 100%;
-}
-.btn-them-vao-gio::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: #e02020;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.28s ease;
-    border-radius: 50px;
-    z-index: 0;
-}
-.btn-them-vao-gio:hover::before { transform: scaleX(1); }
 .btn-them-vao-gio:hover {
-    color: #fff !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 22px rgba(224,32,32,0.35) !important;
+    background-color: #E31837 !important; /* Giữ nguyên màu đỏ khi hover */
+    transform: translateY(-5px) !important; /* Bay nhẹ lên */
+    box-shadow: 0 10px 20px rgba(227, 24, 55, 0.3) !important; /* Đổ bóng sang trọng */
 }
+
 .btn-them-vao-gio:active {
-    transform: translateY(0) scale(0.97) !important;
+    transform: translateY(0) !important;
 }
+
 .btn-them-vao-gio:disabled {
-    opacity: 0.65;
+    opacity: 0.7 !important;
     cursor: not-allowed !important;
     transform: none !important;
 }
-.btn-tvg-text,
+
+/* Text và Loading State */
+.btn-tvg-text {
+    position: relative;
+    z-index: 1;
+    font-weight: 700 !important;
+}
+
 .btn-tvg-loading {
     position: relative;
     z-index: 1;
-}
-.btn-tvg-loading {
-    display: none;
+    display: none !important;
     align-items: center;
     gap: 6px;
 }
 
-/* --- Spinner --- */
+/* Spinner Loading */
 .tvg-spinner {
-    width: 15px;
-    height: 15px;
-    border: 2px solid rgba(224,32,32,0.3);
-    border-top-color: #e02020;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #ffffff;
     border-radius: 50%;
     animation: tvg-spin 0.7s linear infinite;
     display: inline-block;
 }
-.btn-them-vao-gio:hover .tvg-spinner {
-    border-color: rgba(255,255,255,0.35);
-    border-top-color: #fff;
-}
+
 @keyframes tvg-spin {
     to { transform: rotate(360deg); }
 }
 
-/* --- Layout 2 nút cạnh nhau trên màn hình lớn --- */
-.woocommerce form.cart .cart-button-group {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: center;
-}
-.woocommerce form.cart .single_add_to_cart_button {
-    flex: 1;
-    min-width: 140px;
-}
-.btn-them-vao-gio {
-    flex: 1;
-    min-width: 140px;
-    margin-top: 0;
-}
-
-/* --- Thông báo --- */
+/* Thông báo */
 .tvg-notice {
-    display: none;
-    margin-top: 10px;
-    padding: 10px 16px;
-    border-radius: 8px;
+    display: none !important;
+    margin-top: 12px;
+    padding: 12px 16px;
+    border-radius: 4px;
     font-size: 14px;
     font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
     animation: tvg-fadein 0.3s ease;
 }
+
 .tvg-notice--success {
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #b8dfc4;
-}
-.tvg-notice--error {
-    background: #fde8e8;
-    color: #921b1b;
-    border: 1px solid #f5c6c6;
-}
-@keyframes tvg-fadein {
-    from { opacity: 0; transform: translateY(-4px); }
-    to   { opacity: 1; transform: translateY(0); }
+    background-color: #d4edda !important;
+    color: #155724 !important;
+    border: 1px solid #b8dfc4 !important;
 }
 
-/* --- Responsive mobile --- */
-@media (max-width: 600px) {
-    .woocommerce form.cart .cart-button-group {
+.tvg-notice--error {
+    background-color: #fde8e8 !important;
+    color: #921b1b !important;
+    border: 1px solid #f5c6c6 !important;
+}
+
+@keyframes tvg-fadein {
+    from { 
+        opacity: 0; 
+        transform: translateY(-4px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Container 2 nút */
+.cart-button-group {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.cart-button-group .single_add_to_cart_button,
+.cart-button-group .btn-them-vao-gio {
+    flex: 0 1 auto;
+    width: auto;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+    .cart-button-group {
         flex-direction: column;
     }
-    .single_add_to_cart_button,
-    .btn-them-vao-gio {
+
+    .cart-button-group .single_add_to_cart_button,
+    .cart-button-group .btn-them-vao-gio {
         width: 100% !important;
-        text-align: center;
+    }
+
+    .btn-them-vao-gio {
+        height: 48px !important;
     }
 }
