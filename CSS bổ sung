@@ -1,0 +1,675 @@
+/* 1. KẾT NỐI FONT CHỮ CHUẨN: MONTSERRAT & BE VIETNAM PRO */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Be+Vietnam+Pro:wght@300;400;600&display=swap');
+
+/* 2. THIẾT LẬP NỀN TẢNG */
+body {
+    font-family: 'Be Vietnam Pro', sans-serif !important;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ÉP TOÀN BỘ TIÊU ĐỀ VỀ MONTSERRAT (ĐEN - ĐẬM - RÕ - KHÔNG NGHIÊNG) */
+h1, h2, h3, h4, h5, h6, 
+.product-title, 
+.widget-title, 
+.shop-page-title, 
+.section-title b,
+.header-nav-main > li > a {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    font-style: normal !important;
+    letter-spacing: 1px !important;
+    color: #1a1a1a !important;
+    line-height: 1.2 !important;
+}
+
+/* 3. TỐI ƯU HEADER (GIỮ MENU TRÊN 1 DÒNG) */
+.header-nav-main > li > a {
+    font-size: 13px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.header-nav-main > li > a:hover { color: #E31837 !important; }
+
+.header-button .button {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 12px !important;
+    border-radius: 99px !important;
+    height: 34px !important;
+}
+
+/* 4. TRANG SHOP & DANH MỤC: BỐ CỤC 4 CỘT CHUẨN LUXURY */
+@media (min-width: 850px) {
+    .product-small.col { flex: 0 0 25% !important; max-width: 25% !important; }
+}
+@media (max-width: 550px) {
+    .product-small.col { flex: 0 0 50% !important; max-width: 50% !important; }
+}
+
+/* Làm đẹp ô sản phẩm ngoài danh sách */
+.product-small .name {
+    font-family: 'Be Vietnam Pro', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-transform: none !important; /* Tên sản phẩm ngoài list để chữ thường cho dễ đọc */
+    height: 40px !important;
+    text-align: left;
+}
+
+/* 5. SIDEBAR (CỘT TRÁI) SANG TRỌNG */
+.widget-title {
+    font-size: 18px !important;
+    border-bottom: 3px solid #E31837 !important;
+    display: inline-block !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 5px;
+}
+
+/* 6. CHI TIẾT SẢN PHẨM (PHẦN TÔ XANH & NÚT BẤM) */
+h1.product-title {
+    font-size: 36px !important;
+    border-left: 6px solid #E31837;
+    padding-left: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+/* Đảo ngược giá: Mới trước - Cũ sau và Căn trái */
+.price {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    justify-content: flex-end !important;
+    align-items: baseline !important; /* Giúp các con số thẳng hàng chân */
+    gap: 10px; /* Khoảng cách giữa 2 giá */
+    margin: 5px 0 !important;
+}
+
+/* Giá mới (đã giảm) */
+.price ins { 
+    font-size: 1.4em !important; 
+    color: #931a1d !important; /* Đổi sang màu đỏ đậm cho sang trọng giống Areon */
+    text-decoration: none !important; 
+    font-weight: 800 !important; 
+    line-height: 1 !important;
+}
+
+/* Giá cũ (chưa giảm) */
+.price del { 
+    color: #999 !important; /* Màu xám nhẹ cho giá cũ để đỡ rối mắt */
+    font-size: 0.9em !important; 
+    text-decoration: line-through !important;
+    opacity: 0.7;
+}
+
+/* NÚT ADD TO CART: CHỈ BAY, KHÔNG ĐỔI MÀU */
+button.single_add_to_cart_button.button.alt {
+    background-color: #E31837 !important; /* Cố định màu đỏ */
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    border-radius: 4px !important;
+    height: 50px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+button.single_add_to_cart_button.button.alt:hover {
+    background-color: #E31837 !important; /* Giữ nguyên màu đỏ khi hover */
+    transform: translateY(-5px) !important; /* Bay nhẹ lên */
+    box-shadow: 0 10px 20px rgba(227, 24, 55, 0.3) !important; /* Đổ bóng sang trọng */
+}
+
+/* 7. LÀM SẠCH BREADCRUMB (HOME / SHOP) */
+.page-title { background-color: #f8f8f8 !important; border-bottom: 1px solid #eee; }
+.woocommerce-breadcrumb {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #888 !important;
+}
+/* Làm đẹp nhãn HẾT HÀNG (Out of Stock) */
+.out-of-stock-label {
+    background-color: #555 !important; /* Màu xám đen sang trọng thay vì đỏ chói */
+    font-family: 'Sofia Sans Extra Condensed', sans-serif !important;
+    font-size: 14px;
+    padding: 5px 15px;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+/* Ẩn giá và nút mua khi hết hàng để khách không bấm nhầm */
+.out-of-stock .price, .out-of-stock .add_to_cart_button {
+    opacity: 0.5;
+    pointer-events: none;
+}
+/* 1. LÀM ĐẸP THANH TRƯỢT GIÁ (SLIDER) */
+.price_slider_wrapper .ui-widget-content {
+    background: #e0e0e0 !important; /* Nền xám nhạt tinh tế */
+    height: 6px !important;
+    border: none !important;
+    border-radius: 10px;
+}
+
+.price_slider_wrapper .ui-slider-range {
+    background: linear-gradient(90deg, #1a1a1a, #E31837) !important; /* Gradient Đen sang Đỏ cực chất */
+    border-radius: 10px;
+}
+
+/* 2. LÀM ĐẸP NÚT KÉO (HANDLES) */
+.price_slider_wrapper .ui-slider-handle {
+    background: #ffffff !important;
+    border: 3px solid #E31837 !important; /* Viền đỏ rực */
+    width: 20px !important;
+    height: 20px !important;
+    top: -8px !important;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.price_slider_wrapper .ui-slider-handle:hover {
+    transform: scale(1.2); /* Phóng to nhẹ khi chạm vào */
+}
+
+/* 3. CHỈNH CHỮ HIỂN THỊ GIÁ */
+.price_label {
+    font-family: 'Sofia Sans Extra Condensed', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    color: #1a1a1a !important;
+    margin-top: 15px;
+}
+
+/* 4. BIẾN NÚT "FILTER" THÀNH DẠNG SPORTY */
+.widget_price_filter .button {
+    background-color: #1a1a1a !important;
+    color: #fff !important;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif !important;
+    font-size: 14px !important;
+    letter-spacing: 1px;
+    padding: 10px 25px !important;
+    border-radius: 2px !important;
+    transition: 0.3s;
+}
+
+.widget_price_filter .button:hover {
+    background-color: #E31837 !important;
+}
+/* Tùy chỉnh khung danh sách mã giảm giá WPC */
+.wpc-coupons-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.wpc-coupon-item {
+    background: #FAFAFA;
+    border-left: 4px solid #D4AF37; /* Màu vàng Gold đặc trưng của Areon */
+    padding: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 4px;
+}
+
+.wpc-coupon-code {
+    color: #111;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.wpc-coupon-desc {
+    color: #666;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* 1. ÉP KHUNG NẰM NGANG BẰNG MỌI GIÁ */
+div[class*="wpccl-listing"], div[class*="wpclever-coupon-listing"] {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    margin-bottom: 15px !important;
+}
+
+/* 2. CHỈNH LẠI THẺ VOUCHER ĐỂ HIỆN NÚT LƯU */
+.wpccl-coupon, .wpcc-coupon, .wpccl-item, .wpcc-item {
+    background-color: #fff4f4 !important;
+    border: 1px solid #f8a5a5 !important;
+    padding: 8px 50px 8px 30px !important; /* Mở rộng không gian bên phải để chứa nút Lưu */
+    border-radius: 4px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    position: relative !important;
+    cursor: pointer;
+    width: auto !important;
+    overflow: visible !important; /* Quan trọng: Để không bị cắt nút */
+}
+
+/* 3. ICON VOUCHER */
+.wpccl-coupon::before, .wpcc-coupon::before, .wpccl-item::before, .wpcc-item::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 8px !important; 
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23`d70018'%3E%3Cpath d='M22 10V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4c1.1 0 2 .9 2 2s-.9 2-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.46c1.19-.69 2-1.99 2-3.46s-.81-2.77-2-3.46V6h16v2.54z'/%3E%3C/svg%3E") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+/* 4. TẠO NÚT "LƯU" RÕ RÀNG */
+.wpccl-coupon::after, .wpcc-coupon::after, .wpccl-item::after, .wpcc-item::after {
+    content: "LƯU" !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    background-color: #d70018 !important;
+    color: #ffffff !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 12px !important;
+    border-radius: 0 3px 3px 0 !important;
+    z-index: 10 !important;
+}
+
+/* 5. TRẠNG THÁI ĐÃ LƯU */
+.wpccl-coupon.is-saved::after, .wpcc-coupon.is-saved::after, .wpccl-item.is-saved::after, .wpcc-item.is-saved::after {
+    content: "ĐÃ LƯU ✓" !important;
+    background-color: #888888 !important;
+}
+
+/* 6. CHỈNH CHỮ MÀU ĐỎ & ẨN MÃ THỪA */
+.wpccl-value, .wpcc-value, .wpccl-coupon-amount {
+    color: #d70018 !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+}
+.wpccl-value::before, .wpcc-value::before, .wpccl-coupon-amount::before {
+    content: "Giảm " !important;
+}
+.wpccl-code, .wpcc-code, .wpccl-coupon-code, .wpccl-desc, .wpccl-expiry {
+    display: none !important;
+}
+.product-small .box-image {
+    position: relative;
+}
+
+.custom-badge-wrapper {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* TOP RIGHT GROUP */
+.badge-top-right {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 4px;
+}
+
+/* SALE */
+.badge-sale {
+    background: #ff424e;
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+/* THANH PHAN */
+
+.badge-thanh-phan {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 50px;
+    height: 50px;
+
+    background: rgb(152, 26, 26);
+    color: #fff;
+
+    font-size: 8px;
+    line-height: 1.2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 4px;
+    border-radius: 6px;
+
+    white-space: normal;
+    overflow: hidden;
+}
+
+/* LƯỢT BÁN */
+.badge-luot-ban {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 10px;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+
+/* Hiển thị số lượng còn lại cực đẹp để kích thích khách mua nhanh */
+.stock.in-stock {
+    font-family: 'Sofia Sans Extra Condensed', sans-serif !important;
+    font-weight: 700;
+    color: #27ae60 !important; /* Màu xanh lá cây an toàn */
+    background: #f1fcf5;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* Hiển thị khi sắp hết hàng (Dưới ngưỡng Thảo cài đặt) */
+.stock.low-stock {
+    color: #E31837 !important; /* Màu đỏ cảnh báo */
+    background: #fff1f2;
+    animation: flash 1.5s infinite; /* Hiệu ứng nhấp nháy cho gắt */
+}
+
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+/* GRID CHUẨN */
+.woocommerce ul.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 sản phẩm 1 hàng */
+    gap: 20px;
+}
+
+/* CARD */
+.woocommerce ul.products li.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+}
+
+/* ẢNH */
+.woocommerce ul.products li.product img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain; /* tránh méo ảnh */
+}
+
+/* TIÊU ĐỀ - FIX 2 DÒNG */
+.woocommerce ul.products li.product h2 {
+    font-size: 14px;
+    line-height: 1.4;
+    min-height: 40px;
+    margin: 8px 0;
+}
+
+
+
+/* GIÁ */
+.woocommerce ul.products li.product .price {
+    margin-top: auto; /* đẩy giá xuống đáy */
+}
+
+/* FIX CHỒNG BADGE */
+.woocommerce ul.products li.product .onsale {
+    top: 10px;
+    right: 10px;
+    left: auto;
+    z-index: 2;
+}
+
+/* BADGE CUSTOM (100% thiên nhiên) */
+.product .custom-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+}
+
+/* FIX TEXT KHÔNG TRÀN */
+.woocommerce ul.products li.product * {
+    word-break: break-word;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 1. Thiết lập khung cho các nút bấm */
+.stars a {
+    position: relative;
+    display: inline-block;
+    width: auto !important; 
+    min-width: 80px; /* Khoảng cách đủ rộng để hiện cả sao và chữ */
+    height: 30px;
+    color: transparent !important; /* Ẩn ký tự gốc bị lỗi */
+    text-decoration: none !important;
+}
+/* 1. Ẩn nội dung cũ (các ô vuông lỗi) */
+.stars a {
+    color: transparent !important;
+    text-indent: -9999px !important;
+    position: relative;
+    display: inline-block;
+    width: 25px; /* Độ rộng của mỗi số */
+    text-decoration: none !important;
+}
+/* 2. Định dạng nội dung hiển thị (Sao + Số + Chữ) */
+.stars a::before {
+    text-indent: 0 !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-family: sans-serif !important;
+    font-size: 18px; /* Kích thước chữ và sao */
+    color: #ffb600;  /* Màu vàng của Areon */
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* 3. Gán nội dung ký hiệu sao trực tiếp cho từng vị trí */
+.stars a:nth-of-type(1)::before { content: "★"; }
+.stars a:nth-of-type(2)::before { content: "★★"; }
+.stars a:nth-of-type(3)::before { content: "★★★"; }
+.stars a:nth-of-type(4)::before { content: "★★★★"; }
+.stars a:nth-of-type(5)::before { content: "★★★★★"; }
+
+/* 4. Hiệu ứng đổi màu khi khách di chuột qua (Hover) */
+.stars a:hover::before,
+.stars a.active::before {
+    color: #d49a00; /* Vàng đậm hơn khi chọn */
+    cursor: pointer;
+}
+
+/* =============================================
+   GCare - Nút Mua ngay & Thêm vào giỏ
+   ============================================= */
+
+/* --- Nút MUA NGAY (Add to Cart gốc) --- */
+.single_add_to_cart_button,
+.woocommerce .single_add_to_cart_button.button {
+    background: #e02020 !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 14px 32px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    text-transform: none !important;
+    cursor: pointer !important;
+    position: relative !important;
+    overflow: hidden !important;
+    transition: background 0.25s ease, transform 0.18s ease, box-shadow 0.25s ease !important;
+    box-shadow: 0 4px 14px rgba(224,32,32,0.30) !important;
+}
+.single_add_to_cart_button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0);
+    transition: background 0.2s ease;
+    border-radius: 50px;
+}
+.single_add_to_cart_button:hover {
+    background: #c01818 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 22px rgba(224,32,32,0.40) !important;
+}
+.single_add_to_cart_button:hover::after {
+    background: rgba(255,255,255,0.08);
+}
+.single_add_to_cart_button:active {
+    transform: translateY(0) scale(0.97) !important;
+    box-shadow: 0 3px 10px rgba(224,32,32,0.25) !important;
+}
+
+/* --- Nút THÊM VÀO GIỎ (Ajax) --- */
+.btn-them-vao-gio {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: transparent !important;
+    color: #e02020 !important;
+    border: 2px solid #e02020 !important;
+    border-radius: 50px !important;
+    padding: 13px 28px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px;
+    cursor: pointer !important;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.25s ease, color 0.25s ease,
+                transform 0.18s ease, box-shadow 0.25s ease !important;
+    margin-top: 10px;
+    width: 100%;
+}
+.btn-them-vao-gio::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #e02020;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.28s ease;
+    border-radius: 50px;
+    z-index: 0;
+}
+.btn-them-vao-gio:hover::before { transform: scaleX(1); }
+.btn-them-vao-gio:hover {
+    color: #fff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 22px rgba(224,32,32,0.35) !important;
+}
+.btn-them-vao-gio:active {
+    transform: translateY(0) scale(0.97) !important;
+}
+.btn-them-vao-gio:disabled {
+    opacity: 0.65;
+    cursor: not-allowed !important;
+    transform: none !important;
+}
+.btn-tvg-text,
+.btn-tvg-loading {
+    position: relative;
+    z-index: 1;
+}
+.btn-tvg-loading {
+    display: none;
+    align-items: center;
+    gap: 6px;
+}
+
+/* --- Spinner --- */
+.tvg-spinner {
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgba(224,32,32,0.3);
+    border-top-color: #e02020;
+    border-radius: 50%;
+    animation: tvg-spin 0.7s linear infinite;
+    display: inline-block;
+}
+.btn-them-vao-gio:hover .tvg-spinner {
+    border-color: rgba(255,255,255,0.35);
+    border-top-color: #fff;
+}
+@keyframes tvg-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* --- Layout 2 nút cạnh nhau trên màn hình lớn --- */
+.woocommerce form.cart .cart-button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.woocommerce form.cart .single_add_to_cart_button {
+    flex: 1;
+    min-width: 140px;
+}
+.btn-them-vao-gio {
+    flex: 1;
+    min-width: 140px;
+    margin-top: 0;
+}
+
+/* --- Thông báo --- */
+.tvg-notice {
+    display: none;
+    margin-top: 10px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    animation: tvg-fadein 0.3s ease;
+}
+.tvg-notice--success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #b8dfc4;
+}
+.tvg-notice--error {
+    background: #fde8e8;
+    color: #921b1b;
+    border: 1px solid #f5c6c6;
+}
+@keyframes tvg-fadein {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive mobile --- */
+@media (max-width: 600px) {
+    .woocommerce form.cart .cart-button-group {
+        flex-direction: column;
+    }
+    .single_add_to_cart_button,
+    .btn-them-vao-gio {
+        width: 100% !important;
+        text-align: center;
+    }
+}
